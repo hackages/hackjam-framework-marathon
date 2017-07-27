@@ -1,0 +1,54 @@
+<nav class="level">
+  <div class="level-left">
+    <div class="level-item">
+      <p class="subtitle is-5">
+        <strong>Book's</strong> title
+      </p>
+    </div>
+    <div class="level-item">
+      <div class="field has-addons">
+        <p class="control">
+          <input class="input" type="text" placeholder="books"
+                 #bookTitle/>
+        </p>
+        <p class="control">
+          <button class="button" (click)="add()">
+            Add
+          </button>
+        </p>
+      </div>
+    </div>
+  </div>
+</nav>
+<table class="table">
+  <thead>
+  <tr>
+    <th><abbr title="ID">ID</abbr></th>
+    <th>Title</th>
+    <th *ngIf="selectedBook">View Details</th>
+    <th *ngIf="!selectedBook"></th>
+    <th>Delete</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <tr
+    ngFor="let book in books"
+    [class.is-selected]="book === selectedBook"
+    (click)="onSelect(book)"
+  >
+    <td>{{book.id}}</td>
+    <td>{{book.title}}</td>
+    <td ngIf="isSelected(book)">
+      <button class="button" click="gotoDetail()">View Details</button>
+    </td>
+    <td ngIf="!isSelected(book)">
+    </td>
+    <td>
+      <button class="button is-danger" click="delete(book)">
+        x
+      </button>
+    </td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,25 @@
+<div *ngIf="book">
+
+  <div class="card">
+    <header class="card-header">
+      <p class="card-header-title">
+        #{{book.id}} - {{book.title}} details!
+      </p>
+      <a class="card-header-icon">
+      <span class="icon">
+        <i class="fa fa-angle-down"></i>
+      </span>
+      </a>
+    </header>
+    <div class="card-content">
+      <div class="content">
+        <label>Title </label>
+        <input class="input" [(ngModel)]="book.title" placeholder="title"/>
+      </div>
+    </div>
+    <footer class="card-footer">
+      <a class="card-footer-item" click="goBack">Back</a>
+      <a class="card-footer-item" click="save">Save</a>
+    </footer>
+  </div>
+</div>

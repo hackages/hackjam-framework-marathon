@@ -1,0 +1,24 @@
+<nav class="navbar">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="#">
+      <img src="../../assets/img/hackages.jpg"
+           alt="Logo"
+           width="112" height="28"/>
+    </a>
+    <div class="navbar-item">
+      <h1>Hackzon</h1>
+    </div>
+  </div>
+
+  <div id="navmenuMobile" class="navbar-menu is-active">
+    <div class="navbar-start">
+      <a class="navbar-item" routerLink="/dashboard" routerLinkActive="is-active">Home</a>
+      <a class="navbar-item" routerLink="/books" routerLinkActive="is-active">Manage Books</a>
+    </div>
+    <div class="navbar-end">
+      <bs-book-search></bs-book-search>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
+

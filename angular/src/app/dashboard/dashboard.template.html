@@ -1,0 +1,24 @@
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline">
+      <div class="column is-one-quarter" ngFor="let book in books">
+        <div class="card">
+          <a [routerLink]="['/detail', book.id]">
+            <div class="card-header">
+              <p class="card-header-title has-text-centered">{book.title}</p>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                {book.description}
+                <br/>
+              </div>
+            </div>
+            <div class="card-footer">
+              <p class="card-footer-item">{book.category}</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

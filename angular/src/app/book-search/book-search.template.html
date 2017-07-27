@@ -1,0 +1,14 @@
+<div class="navbar-item" [class.is-active]="">
+  <div class="field is-grouped">
+    <input class="control input " (keyup)="search()" placeholder="Search"/>
+  </div>
+  <div class="navbar-dropdown">
+    <ul>
+      <li *ngFor="let book of books">
+        <a (click)="gotoDetail(book)">
+          {{shortenTitle(book.title)}}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
